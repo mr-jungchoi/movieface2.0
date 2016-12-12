@@ -3,19 +3,13 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
-  end
-
-  def new
-  end
-
-  def create
     search_keyword = params[:search]
     youtube_response = open(youtube_url + search_keyword + trailer_search(search_keyword) + youtube_token).read
     omdb_response = open(omdb_url + search_keyword).read
+
     @movie = Movie.parse(youtube_response, omdb_response)
-    @movie.save
   end
+
   private
 
   def movie_params
