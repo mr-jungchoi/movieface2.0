@@ -17,11 +17,21 @@
       <% end %>
     </ul>
   </div>
-  
+
 </div>
 
 
 <!-- Right side partial reviews -->
 <div class="">
+  <div class="">
+    Favorite Moves:
+  </div>
 
+  <div class="">
+    <ul>
+      <% @user.reviews.each do |review| %>
+        <li><%= review.movie.title %> - <%= review.rating %>/5</li>
+      <% end %>
+    </ul>
+  </div>
 </div>
