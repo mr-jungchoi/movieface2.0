@@ -1,0 +1,37 @@
+<div class="">
+  Welcome, <%= @user.username %>!!!
+</div>
+
+
+<!-- Favorite movies left side -->
+<div class="">
+
+  <div class="">
+    Favorite Movies:
+  </div>
+
+  <div class="">
+    <ul>
+      <% @user.favorites.each do |movie| %>
+        <li><%= movie.title %> - <%= movie.year %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+
+<!-- Right side partial reviews -->
+<div class="">
+  <div class="">
+    Reviewed Movies:
+  </div>
+
+  <div class="">
+    <ul>
+      <% @user.reviews.each do |review| %>
+        <li><%= review.movie.title %> - <%= review.rating %>/5</li>
+      <% end %>
+    </ul>
+  </div>
+</div>
