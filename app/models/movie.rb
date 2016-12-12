@@ -21,4 +21,10 @@ class Movie < ApplicationRecord
              actors: omdb_hash["Actors"],
              plot: omdb_hash["Plot"])
   end
+
+  def self.find_partial(title)
+    search_array = self.where("title LIKE :title", title: "%#{title}%")
+    search_array[0]
+  end
+
 end
