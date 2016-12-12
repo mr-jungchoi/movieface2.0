@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Movieface20</title>
+    <title>IMDb Clone</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <nav>
+      <a href='/'>Home</a>
+    </nav>
+    <%= form_for :movie, url: m%>
+    <form id='randomize' action="/movies/show">
+      <input type='text' name='search' placeholder='Movie Title'>
+      <input type='submit' value="Search">
+    </form>
+    <h1>IMDb Clone</h1>
     <%= yield %>
   </body>
 </html>
