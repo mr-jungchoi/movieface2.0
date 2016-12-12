@@ -24,8 +24,16 @@
         </ul>
       </div>
     </nav>
-    <form id='randomize' action="/movies/show">
-      <input type='text' name='search' placeholder='Movie Title'>
+    <% if flash[:error] %>
+      <% flash[:error].each do |error| %>
+      <ul>
+        <%= error %>
+      </ul>
+      <% end %>
+    <% end %>
+    <form id='randomize' action="/movies" method="post">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+      <input type='text' name='query' placeholder='Movie Title'>
       <input type='submit' value="Search">
     </form>
     <h1>IMDb Clone</h1>
