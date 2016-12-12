@@ -1,0 +1,27 @@
+<h2>Sign in</h2>
+<% if @errors %>
+  <div id="error_explanation">
+    <h3>
+      <%= pluralize(@errors.count, "errors") %> prohibited this article from being saved:
+    </h3>
+    <ul>
+      <% @errors.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for :session, url: sessions_path do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Sign In" %>
+  </p>
+<% end %>
