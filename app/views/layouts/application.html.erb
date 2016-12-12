@@ -11,7 +11,18 @@
 
   <body>
     <nav>
-      <a href='/'>Home</a>
+      <div class="nav-wrapper">
+        <%= link_to "MovieFace 2.0",root_url, class: "brand-logo" %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+          <% if logged_in? %>
+            <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
+            <li><%= link_to "Log Out", session_path(session), method: :delete%></li>
+          <% else %>
+            <li><%= link_to "Create an Account", new_user_path %></li>
+            <li><%= link_to "Log In", new_session_path%></li>
+          <% end %>
+        </ul>
+      </div>
     </nav>
     <form id='randomize' action="/movies/show">
       <input type='text' name='search' placeholder='Movie Title'>
