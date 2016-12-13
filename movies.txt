@@ -71,7 +71,6 @@
 71. North by Northwest (1959)	8.3
 72. Vertigo (1958)	8.3
 73. Star Wars: Episode VI - Return of the Jedi (1983)	8.3
-74. M (1931)	8.3
 75. Reservoir Dogs (1992)	8.3
 76. Braveheart (1995)	8.3
 77. Amelie (2001)	8.3
@@ -225,7 +224,6 @@
 225. Harry Potter and the Deathly Hallows: Part 2 (2011)	8.0
 226. Donnie Darko (2001)	8.0
 227. Monsters, Inc. (2001)	8.0
-228. 8½ (1963)	8.0
 229. Chak de! India (2007)	8.0
 230. The Wizard of Oz (1939)	8.0
 231. The Terminator (1984)	8.0
