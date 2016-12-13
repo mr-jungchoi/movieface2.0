@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :authorized?
+  helper_method :current_user, :logged_in?, :capitalize_search,
 
   def youtube_token
     @youtube_token ||= "&key=#{Dotenv.load["YOUTUBE_TOKEN"]}"

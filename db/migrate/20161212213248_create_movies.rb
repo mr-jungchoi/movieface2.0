@@ -10,6 +10,7 @@ class CreateMovies < ActiveRecord::Migration[5.0]
       t.string   :writer, null: false
       t.string   :actors
       t.string   :plot, null: false
+      t.string   :poster
       t.references :genre
 
       t.timestamps
