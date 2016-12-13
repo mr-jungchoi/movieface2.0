@@ -1,7 +1,5 @@
-<div class ="center-align">
   <div class="carousel">
     <% @genre.movies.each do |movie| %>
         <p> <%= link_to image_tag(movie.poster), movie_path(movie), class: "carousel-item" %></p>
     <% end %>
   </div>
-</div>
