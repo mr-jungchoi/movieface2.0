@@ -11,6 +11,9 @@ class Movie < ApplicationRecord
     omdb_hash = JSON.parse(omdb_response)
     youtube_id = youtube_hash["items"][0]["id"]["videoId"]
 
+    movie = self.find_by_title(omdb_hash["Title"])
+    return movie if movie
+
     self.new(title: omdb_hash["Title"],
              youtube_trailer_id: youtube_id,
              year: omdb_hash["Year"],

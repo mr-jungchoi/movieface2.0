@@ -40,7 +40,7 @@ class MoviesController < ApplicationController
   end
 
   def youtube_url
-    "https://www.googleapis.com/youtube/v3/search?part=snippet&q="
+    "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q="
   end
 
   def omdb_url
