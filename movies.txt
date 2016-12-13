@@ -74,7 +74,7 @@
 74. M (1931)	8.3
 75. Reservoir Dogs (1992)	8.3
 76. Braveheart (1995)	8.3
-77. Amélie (2001)	8.3
+77. Amelie (2001)	8.3
 78. Requiem for a Dream (2000)	8.3
 79. A Clockwork Orange (1971)	8.3
 80. Taxi Driver (1976)	8.3
@@ -208,7 +208,7 @@
 208. Jurassic Park (1993)	8.1
 209. Hachi: A Dog's Tale (2009)	8.1
 210. The Message (1976)	8.1
-211. Nausicaä of the Valley of the Wind (1984)	8.1
+211. Nausicaa of the Valley of the Wind (1984)	8.1
 212. Memories of Murder (2003)	8.1
 213. Stalker (1979)	8.0
 214. The Grapes of Wrath (1940)	8.0
