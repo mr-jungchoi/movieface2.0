@@ -14,7 +14,6 @@
  *= require_self
  */
  #footer {
-    position:fixed;
     left:0px;
     bottom:0px;
     height: 250x;
@@ -23,11 +22,11 @@
 
  .copy_right {
    display:  inline;
-   margin-left: 20px;
+   margin-left: 10px;
 
  }
 
  .api_credit {
    display: inline;
-   padding-left: 30%;
+   padding-left: 22%;
  }
