@@ -1,10 +1,10 @@
 <h1>Sign Up</h1>
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2>
-      <%= pluralize(@user.errors.count, "errors") %> prohibited this account from being saved:
+    <p>
       <img src="http://i.imgur.com/65goE8v.gif">
-    </h2>
+      <%= pluralize(@user.errors.count, "errors") %> prohibited this account from being saved:
+    </p>
     <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
