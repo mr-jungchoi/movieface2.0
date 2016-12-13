@@ -16,3 +16,6 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
