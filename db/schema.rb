@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20161212213248) do
     t.string   "writer",             null: false
     t.string   "actors"
     t.string   "plot",               null: false
+    t.string   "poster"
     t.integer  "genre_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false

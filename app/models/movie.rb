@@ -19,7 +19,8 @@ class Movie < ApplicationRecord
              director: omdb_hash["Director"],
              writer: omdb_hash["Writer"],
              actors: omdb_hash["Actors"],
-             plot: omdb_hash["Plot"])
+             plot: omdb_hash["Plot"],
+             poster: omdb_hash["Poster"])
   end
 
   def self.find_partial(title)
