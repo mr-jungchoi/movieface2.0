@@ -8,19 +8,19 @@
        <script src="https://use.fontawesome.com/b830648cce.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application' %>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body class="grey">
+  <body  class="grey">
     <div class="container white layout z-depth-2">
-    <nav>
+    <nav >
       <div class="nav-wrapper grey darken-4">
         <p>
-        <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text" %></p>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
+        <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
             <li><%= link_to "Log Out", session_path(session), method: :delete%></li>
@@ -49,7 +49,12 @@
      </div>
    </form>
  </div>
+
     <%= yield %>
+
+
+
+
   </div>
   <footer id="footer" class="page-footer grey darken-4">
     <div class="footer-copyright">

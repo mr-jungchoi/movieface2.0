@@ -1,10 +1,9 @@
 <div class="container">
   <h3><%= @genre.name %></h3>
 
-  <% @genre.movies.each do |movie| %>
-    <ul>
-      <%= image_tag(movie.poster) %>
-      <%= link_to movie.title, movie_path(movie) %>
-    </ul>
-  <% end %>
+  <div class="carousel">
+    <% @genre.movies.each do |movie| %>
+        <p> <%= link_to image_tag(movie.poster), movie_path(movie), class: "carousel-item" %></p>
+    <% end %>
+  </div>
 </div>
