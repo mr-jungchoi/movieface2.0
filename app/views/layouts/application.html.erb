@@ -19,6 +19,19 @@
       <div class="nav-wrapper  grey darken-4">
         <p>
               <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
+              <% if flash[:error] %>
+              <% flash[:error].each do |error| %>
+              <ul>
+                <%= error %>
+              </ul>
+              <% end %>
+              <% end %>
+              <form id='randomize' action="/movies" method="post">
+                <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+                <input type='text' name='query' placeholder='Movie Title'>
+                <%= button_tag( :class => 'btn-floating btn-sml green darken-2') do %><i class="material-icons left">search</i>Search
+                <%end%>
+              </form>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
@@ -30,18 +43,6 @@
         </ul>
       </div>
     </nav>
-    <% if flash[:error] %>
-      <% flash[:error].each do |error| %>
-      <ul>
-        <%= error %>
-      </ul>
-      <% end %>
-    <% end %>
-    <form id='randomize' action="/movies" method="post">
-      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-      <input type='text' name='query' placeholder='Movie Title'>
-      <input type='submit' value="Search">
-    </form>
 
     <%= yield %>
 
