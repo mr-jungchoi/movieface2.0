@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IMDb Clone</title>
+    <title>MovieFace</title>
     <%= csrf_meta_tags %>
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <script src="https://use.fontawesome.com/b830648cce.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <nav>
-      <div class="nav-wrapper">
-        <%= link_to "MovieFace 2.0",root_url, class: "brand-logo" %>
+  <body  class="grey ">
+    <div class="container white layout z-depth-2">
+    <nav >
+      <div class="nav-wrapper  grey darken-4">
+        <p>
+              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
@@ -31,20 +37,32 @@
       </ul>
       <% end %>
     <% end %>
-    <form id='randomize' action="/movies" method="post">
-      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-      <input type='text' name='query' placeholder='Movie Title'>
-      <input type='submit' value="Search">
-    </form>
-    <h1>IMDb Clone</h1>
+    <div class="row">
+   <form class="col s12 offset-s6" action="/movies" method="post">
+       <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">search</i>
+         <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Movie Title'>
+       </div>
+     </div>
+   </form>
+ </div>
+
+
     <%= yield %>
-    <footer id="footer" class="page-footer">
-      <div class="footer-copyright">
-        <div class="">
-        <p class="copy_right">© 2016 Copyright Text</p>
+
+
+
+
+  </div>
+  <footer id="footer" class="page-footer grey darken-4">
+    <div class="footer-copyright">
+      <div class="">
+        <p class="copy_right">© 2016 Copyright MovieFace2.0</p>
         <p class="api_credit">API power by <a href="https://www.omdbapi.com/">OMDB</a> and <a href="https://developers.google.com/youtube/v3/">YOUTUBE</a></p>
-        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </body>
 </html>

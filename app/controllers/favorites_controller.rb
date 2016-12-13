@@ -15,9 +15,6 @@ class FavoritesController < ApplicationController
       @favorite.user_id = current_user.id
       if @favorite.save
         redirect_to movie_path(@movie)
-      else
-        render 'new'
-      end
     else
     redirect_to new_session_path
   end
