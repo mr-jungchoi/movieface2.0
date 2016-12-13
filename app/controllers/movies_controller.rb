@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
       omdb_response = open(omdb_url + search_keyword).read
       # error handling not working
       # if omdb_response["Response"] == "True"
-        youtube_response = open(youtube_url + search_keyword + trailer_search(search_keyword) + youtube_token).read
+        youtube_response = open(youtube_url + trailer_search(search_keyword) + youtube_token).read
         @movie = Movie.parse(youtube_response, omdb_response)
         genre = Genre.parse(omdb_response)
         @genre = Genre.find_or_create_by(name: genre.name)
