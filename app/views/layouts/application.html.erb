@@ -16,6 +16,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <body  class="grey">
     <div class="container white layout z-depth-2">
 =======
@@ -28,13 +29,21 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
 =======
   <body class="grey">
+=======
+  <body  class="grey">
+>>>>>>> add carousel
     <div class="container white layout z-depth-2">
-    <nav>
+    <nav >
       <div class="nav-wrapper grey darken-4">
         <p>
+<<<<<<< HEAD
         <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text" %></p>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
 >>>>>>> fix issues
+=======
+              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
+        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+>>>>>>> add carousel
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
             <li><%= link_to "Log Out", session_path(session), method: :delete%></li>
@@ -64,7 +73,12 @@
      </div>
    </form>
  </div>
+
     <%= yield %>
+
+
+
+
   </div>
   <footer id="footer" class="page-footer grey darken-4">
     <div class="footer-copyright">

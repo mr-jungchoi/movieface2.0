@@ -18,6 +18,7 @@
 //= require_tree .
 $(document).ready(function(){
 <<<<<<< HEAD
+<<<<<<< HEAD
     $('.carousel').carousel();
   });
 =======
@@ -30,3 +31,7 @@ $(document).ready(function(){
 
    });
 >>>>>>> fix issues
+=======
+    $('.carousel').carousel();
+  });
+>>>>>>> add carousel
