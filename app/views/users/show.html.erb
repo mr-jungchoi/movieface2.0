@@ -1,5 +1,5 @@
 <div class="">
-  Welcome, <%= @user.username %>!!!
+  Welcome, <%= @user.username.capitalize %>!
 </div>
 
 
@@ -14,7 +14,7 @@
     <ul>
       <% @user.favorites.each do |favorite| %>
 
-      <li><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>  <%= favorite.movie.title %> - <%= favorite.movie.year %></li>
+      <li><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> <a href="/movies/<%= favorite.movie_id %>"><%= favorite.movie.title %></a> - <%= favorite.movie.year %></li>
       <% end %>
     </ul>
   </div>
