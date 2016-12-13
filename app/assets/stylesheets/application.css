@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ #footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height: 250x;
+    width:100%;
+ }
+
+ .copy_right {
+   display:  inline;
+   margin-left: 20px;
+
+ }
+
+ .api_credit {
+   display: inline;
+   padding-left: 30%;
+ }
