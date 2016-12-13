@@ -17,21 +17,5 @@
 //= require components
 //= require_tree .
 $(document).ready(function(){
-<<<<<<< HEAD
-<<<<<<< HEAD
     $('.carousel').carousel();
   });
-=======
-     $('.carousel').carousel({
-           dist:0,
-           shift:0,
-           padding:20,
-
-     });
-
-   });
->>>>>>> fix issues
-=======
-    $('.carousel').carousel();
-  });
->>>>>>> add carousel
