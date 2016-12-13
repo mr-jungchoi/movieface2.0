@@ -7,5 +7,6 @@
     <li>Writer(s): <%= @movie.writer %></li>
     <li>Actors: <%= @movie.actors %></li>
     <li>Plot: <%= @movie.plot %></li>
+    <li>Average Rating: <%=@movie.reviews.average(:rating) %></li>
   </ul>
 </div>
