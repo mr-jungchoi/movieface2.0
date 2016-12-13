@@ -14,28 +14,29 @@
  *= require_tree .
  *= require_self
  */
- #footer {
-   float: bottom;
-    left:0px;
-    bottom:0px;
-    height: 250x;
-    width:100%;
- }
+
+#footer {
+  float: bottom;
+  left:0px;
+  bottom:0px;
+  height: 250x;
+  width:100%;
+}
+
 nav {
   margin: auto;
-    width: 70%;
-
+  width: 70%;
 }
- .copy_right {
-   display:  inline;
-   margin-left: 10px;
 
- }
+.copy_right {
+  display:  inline;
+  margin-left: 10px;
+}
 
- .api_credit {
-   display: inline;
-   padding-left: 22%;
- }
+.api_credit {
+  display: inline;
+  padding-left: 22%;
+}
 
 .layout_container {
   width: 70%;
@@ -43,15 +44,16 @@ nav {
   margin-bottom: 1em;
   min-height: 1000px;
 }
+
 .nav-wrapper {
   padding-left: 20px;
-
 }
+
 body{
-   font: 12px Helvetica, Arial, sans-serif;
+  font: 12px Helvetica, Arial, sans-serif;
 }
 
 #randomize {
-    margin-left: 150px;
-    margin-right: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
