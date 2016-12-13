@@ -11,8 +11,9 @@ class MoviesController < ApplicationController
   end
 
   def create
-    search_keyword = params[:query]
+    search_keyword = params[:query].downcase
     @movie = Movie.find_partial(search_keyword)
+    # binding.pry
     if @movie
       redirect_to movie_path(@movie)
     else
