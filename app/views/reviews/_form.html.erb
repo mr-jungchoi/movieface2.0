@@ -1,8 +1,30 @@
-<%= form_for ([ @movie, @movie.reviews.build ]) do |f| %>
+<div class="">
+  <form class="" action="/movies/<%= @movie.id %>/reviews" method="post">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div class="">
+      <label for="content"> Review: </label>
+      <textarea rows="4" cols="50" name="review[content]" value=""></textarea>
+    </div>
 
-  <p> Review:</br> <%= f.text_field :content%> </p>
-  <p> Rating(Out of 5):</br> <%= f.number_field :rating%> </p>
+    <div class="">
+      <div class="">
+        <label for="rating"> Rating(Out of 5): </label>
+      </div>
 
-  <%= f.submit :Submit %>
+      <div>
+        <select class="browser-default" name="review[rating]">
+          <option value="" disabled selected>Choose your rating</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
 
-<% end %>
+    <div class="">
+      <input type="submit" name="" value="Rate!">
+    </div>
+  </form>
+</div>
