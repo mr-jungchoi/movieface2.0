@@ -15,11 +15,10 @@
   </head>
 
   <body  class="grey ">
-    <div class="container white layout z-depth-2">
     <nav >
       <div class="nav-wrapper  grey darken-4">
         <p>
-              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
+              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo white-text " %></p>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
@@ -31,6 +30,7 @@
         </ul>
       </div>
     </nav>
+    <div class="container white layout_container z-depth-2">
     <% if flash[:error] %>
       <% flash[:error].each do |error| %>
       <ul>
@@ -39,12 +39,12 @@
       <% end %>
     <% end %>
     <div class="row">
-   <form class="col s12 offset-s6" action="/movies" method="post">
+   <form class="col s12 offset-s36" action="/movies" method="post">
        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
      <div class="row">
        <div class="input-field col s6">
          <i class="material-icons prefix">search</i>
-         <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Movie Title'>
+         <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Title'>
        </div>
      </div>
    </form>
