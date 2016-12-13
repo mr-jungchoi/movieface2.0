@@ -13,7 +13,7 @@ class FavoritesController < ApplicationController
     if logged_in?
       @favorite = @movie.favorites.create
       @favorite.user_id = current_user.id
-    end  
+    end
     if @favorite.save
       redirect_to movie_path(@movie)
     else

@@ -1,4 +1,5 @@
-<h2>Sign in</h2>
+<div class="container">
+<h4>Sign in</h4>
 <% if @errors %>
   <div id="error_explanation">
     <p>
@@ -14,15 +15,18 @@
 <% end %>
 
 <%= form_for :session, url: sessions_path do |f| %>
-  <p>
+<div class="input-field col s6">
+  <i class="material-icons prefix">email</i>
     <%= f.label :email %>
     <%= f.email_field :email %>
-  </p>
-  <p>
+  </div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">vpn_key</i>
     <%= f.label :password %>
     <%= f.password_field :password %>
-  </p>
+  </div>
   <p>
-    <%= f.submit "Sign In" %>
+       <%= button_tag( :class => 'btn btn-default green darken-2') do %>Sign In<%end%>
   </p>
 <% end %>
+</div>
