@@ -12,8 +12,9 @@
 
   <div class="">
     <ul>
-      <% @user.favorites.each do |movie| %>
-        <li><%= movie.title %> - <%= movie.year %></li>
+      <% @user.favorites.each do |favorite| %>
+
+      <li><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i>  <%= favorite.movie.title %> - <%= favorite.movie.year %></li>
       <% end %>
     </ul>
   </div>
