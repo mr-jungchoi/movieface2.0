@@ -37,26 +37,32 @@
       </ul>
       <% end %>
     <% end %>
-    <form id='randomize' action="/movies" method="post">
-      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-      <input type='text' name='query' placeholder='Movie Title'>
-    <%= button_tag( :class => 'btn btn-sml green darken-2') do %><i class="material-icons left">search</i>Search
-    <%end%>
-    </form>
+    <div class="row">
+   <form class="col s12 offset-s6" action="/movies" method="post">
+       <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">search</i>
+         <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Movie Title'>
+       </div>
+     </div>
+   </form>
+ </div>
+
 
     <%= yield %>
 
 
-    <footer id="footer" class="page-footer">
-      <div class="footer-copyright">
-        <div class="">
-        <p class="copy_right">© 2016 Copyright MovieFace2.0</p>
-        <p class="api_credit">API power by <a href="https://www.omdbapi.com/">OMDB</a> and <a href="https://developers.google.com/youtube/v3/">YOUTUBE</a></p>
-        </div>
-      </div>
-    </footer>
 
 
   </div>
+  <footer id="footer" class="page-footer grey darken-4">
+    <div class="footer-copyright">
+      <div class="">
+        <p class="copy_right">© 2016 Copyright MovieFace2.0</p>
+        <p class="api_credit">API power by <a href="https://www.omdbapi.com/">OMDB</a> and <a href="https://developers.google.com/youtube/v3/">YOUTUBE</a></p>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>
