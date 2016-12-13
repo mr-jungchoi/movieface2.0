@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @review = @movie.reviews.find_by_id(params[:id])
   end
 
   def create
