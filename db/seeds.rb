@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+movies = []
+f = File.open('movies.txt', 'r')
+
+f.each_line do |line|
+  title = line.gsub(/\d+\. (.+) .+/, '\1').chomp
+
+  movies << title
+end
+
+movies.each do |title|
+  omdb_response = open("http://www.omdbapi.com/?y=&plot=short&r=json&t=#{title}").read
+  youtube_response = open("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=#{title}+trailer&key=#{Dotenv.load["YOUTUBE_TOKEN"]}").read
+  movie = Movie.parse(youtube_response, omdb_response)
+  movie_genre = Genre.parse(omdb_response)
+  genre = Genre.find_or_create_by(name: movie_genre.name)
+  movie.genre = genre
+  movie.save
+end

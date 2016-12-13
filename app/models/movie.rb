@@ -11,6 +11,9 @@ class Movie < ApplicationRecord
     omdb_hash = JSON.parse(omdb_response)
     youtube_id = youtube_hash["items"][0]["id"]["videoId"]
 
+    movie = self.find_by_title(omdb_hash["Title"])
+    return movie if movie
+
     self.new(title: omdb_hash["Title"],
              youtube_trailer_id: youtube_id,
              year: omdb_hash["Year"],
@@ -23,12 +26,12 @@ class Movie < ApplicationRecord
              poster: omdb_hash["Poster"])
   end
 
-  @@uncapitalized_words = %w(a the on of in by and to but or so as nor for at)
+  @@noncapitalized_words = %w(a the on of in by and to but or so as nor for at)
 
   def self.find_partial(query)
     query = query.downcase
     title_words = query.split(" ").each_with_index.map do |word, i|
-      if i == 0 || !@@uncapitalized_words.include?(word)
+      if i == 0 || !@@noncapitalized_words.include?(word)
         word.capitalize
       else
         word
@@ -37,7 +40,5 @@ class Movie < ApplicationRecord
     title = title_words.join(" ")
     search_array = self.where("title LIKE :title", title: "%#{title}%")
     search_array[0]
-
   end
-
 end

@@ -1,7 +1,7 @@
 <h2><%= @movie.title %></h2>
 <%= image_tag(@movie.poster) %>
 <iframe id="player" type="text/html"
-        width="1000" height="560"
+        width="790" height="445"
         src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
         frameborder="0"
 ></iframe>
