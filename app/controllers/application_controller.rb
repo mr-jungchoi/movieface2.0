@@ -13,11 +13,5 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by_id(session[:user_id])
   end
 
-  def capitalize_search(search)
-    search = search.split(" ")
-    search = search.map {|word| word.capitalize}
-    search = search.join(" ")
-  end
-
   protect_from_forgery with: :exception
 end

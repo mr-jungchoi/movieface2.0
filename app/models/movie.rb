@@ -23,9 +23,21 @@ class Movie < ApplicationRecord
              poster: omdb_hash["Poster"])
   end
 
-  def self.find_partial(title)
+  @@uncapitalized_words = %w(a the on of in by and to but or so as nor for at)
+
+  def self.find_partial(query)
+    query = query.downcase
+    title_words = query.split(" ").each_with_index.map do |word, i|
+      if i == 0 || !@@uncapitalized_words.include?(word)
+        word.capitalize
+      else
+        word
+      end
+    end
+    title = title_words.join(" ")
     search_array = self.where("title LIKE :title", title: "%#{title}%")
     search_array[0]
+
   end
 
 end
