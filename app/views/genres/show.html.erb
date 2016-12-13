@@ -1,10 +1,14 @@
-<div class="container">
-  <h3><%= @genre.name %></h3>
+<div class ="center-align">
+  <br/>
+    <br/>
+      <br/>
+        <br/>
+<h4><% @genre.name %></h4>
+<% @genre.movies.each do |movie| %>
+  <ul >
+    <%= image_tag(movie.poster) %>
+    <%= link_to movie.title, movie_path(movie) %>
+  </ul>
+<% end %>
 
-  <% @genre.movies.each do |movie| %>
-    <ul>
-      <%= image_tag(movie.poster) %>
-      <%= link_to movie.title, movie_path(movie) %>
-    </ul>
-  <% end %>
 </div>
