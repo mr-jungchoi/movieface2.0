@@ -9,6 +9,7 @@ end
 
 movies.each do |title|
   movie = Movie.find_by_title(title)
+  
   if movie == nil
     omdb_response = open("http://www.omdbapi.com/?y=&plot=short&r=json&t=#{title}").read
     youtube_response = open("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=#{title}+trailer&key=#{Dotenv.load["YOUTUBE_TOKEN"]}").read
