@@ -1,4 +1,5 @@
-<div class="movie-information">
+<div class="container">
+
   <ul>
     <li>Year: <%= @movie.year %></li>
     <li>Rated: <%= @movie.rated %></li>
@@ -9,4 +10,5 @@
     <li>Plot: <%= @movie.plot %></li>
     <li>Average Rating: <%=@movie.reviews.average(:rating) %></li>
   </ul>
+
 </div>

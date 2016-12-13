@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,6 +15,7 @@
  *= require_self
  */
  #footer {
+   float: bottom;
     left:0px;
     bottom:0px;
     height: 250x;
@@ -30,3 +32,22 @@
    display: inline;
    padding-left: 22%;
  }
+
+.layout {
+  max-height: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav-wrapper {
+  padding-left: 20px;
+
+}
+body{
+   font: 12px Helvetica, Arial, sans-serif;
+}
+
+#randomize {
+    margin-left: 150px;
+    margin-right: 150px;
+}
