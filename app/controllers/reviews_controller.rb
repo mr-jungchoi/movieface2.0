@@ -2,7 +2,11 @@ class ReviewsController < ApplicationController
   before_action :find_movie, only: [:show, :new, :create, :edit, :destroy]
 
   def new
-    @review = Review.new
+    if logged_in?
+      @review = Review.new
+    else
+      redirect_to new_session_path
+    end
   end
 
   def show
@@ -10,12 +14,16 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = @movie.reviews.create(review_params)
-    @review.user_id = current_user.id
-    if @review.save
-      redirect_to movie_path(@movie)
+    if logged_in?
+      @review = @movie.reviews.create(review_params)
+      @review.user_id = current_user.id
+      if @review.save
+        redirect_to movie_path(@movie)
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to new_session_path
     end
   end
 
@@ -23,9 +31,13 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = @movie.reviews.create(review_params)
-    @review.destroy
-    redirect_to movie_path(@movie)
+    if logged_in?
+      @review = @movie.reviews.create(review_params)
+      @review.destroy
+      redirect_to movie_path(@movie)
+    else
+      redirect_to new_session_path
+    end
   end
 
   private

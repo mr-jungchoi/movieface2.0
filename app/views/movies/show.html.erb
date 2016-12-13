@@ -8,9 +8,13 @@
 
 <%= render 'movies/movie', layout: false %>
 <% if logged_in? %>
-  <p><%= link_to 'Create a new Review', new_movie_review_path(@movie) %></p>
-  <%= form_for ([ @movie, @movie.favorites.build ]) do |f| %>
-   <%= button_tag( :class => 'btn btn-default green darken-2') do %>Favorite<%end%>
+  <% unless movie_reviewed? %>
+    <p><%= link_to 'Create a new Review', new_movie_review_path(@movie) %></p>
+  <% end %>
+  <% unless movie_favorited? %>
+    <%= form_for ([ @movie, @movie.favorites.build ]) do |f| %>
+     <%= button_tag( :class => 'btn btn-default green darken-2') do %>Favorite<%end%>
+    <% end %>
   <% end %>
 
   <% unless @movie.reviews.empty? %>
