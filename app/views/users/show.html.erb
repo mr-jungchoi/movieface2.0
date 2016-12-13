@@ -30,7 +30,7 @@
   <div class="">
     <ul>
       <% @user.reviews.each do |review| %>
-        <li><%= review.movie.title %> - <%= review.rating %>/5</li>
+        <li><a href="/movies/<%= review.movie.id %>/reviews/<%= review.id %>"><%= review.movie.title %></a> - <%= review.rating %>/5</li>
       <% end %>
     </ul>
   </div>
