@@ -1,4 +1,5 @@
-<h1>Sign Up</h1>
+<div class="container">
+<h4>Sign Up</h4>
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <p>
@@ -14,19 +15,24 @@
 <% end %>
 
 <%= form_for :user, url: users_path do |f| %>
-  <p>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
     <%= f.label :username %>
     <%= f.text_field :username %>
-  </p>
-  <p>
+  </div>
+<div class="input-field col s6">
+  <i class="material-icons prefix">email
+</i>
     <%= f.label :email %>
     <%= f.email_field :email %>
-  </p>
-  <p>
+  </div>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">vpn_key</i>
     <%= f.label :password %>
     <%= f.password_field :password %>
-  </p>
+  </div>
   <p>
-    <%= f.submit %>
+     <%= button_tag( :class => 'btn btn-default green darken-2') do %>Submit<%end%>
   </p>
 <% end %>
+</div>
