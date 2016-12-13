@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IMDb Clone</title>
+    <title>MovieFace</title>
     <%= csrf_meta_tags %>
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <script src="https://use.fontawesome.com/b830648cce.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <nav>
-      <div class="nav-wrapper">
-        <%= link_to "MovieFace 2.0",root_url, class: "brand-logo" %>
+  <body  class="grey ">
+    <div class="container white layout z-depth-2">
+    <nav >
+      <div class="nav-wrapper  grey darken-4">
+        <p>
+              <%= link_to "MovieFace 2.0",root_url, class: "brand-logo amber-text " %></p>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
@@ -36,8 +42,9 @@
       <input type='text' name='query' placeholder='Movie Title'>
       <input type='submit' value="Search">
     </form>
-    <h1>IMDb Clone</h1>
+
     <%= yield %>
+
     <footer id="footer" class="page-footer">
       <div class="footer-copyright">
         <div class="">
@@ -46,5 +53,8 @@
         </div>
       </div>
     </footer>
+
+  </div>
+
   </body>
 </html>

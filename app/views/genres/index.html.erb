@@ -1,6 +1,11 @@
+<div class="container">
 <h3>Genres</h3>
 <% @genres.each do |genre| %>
+<div class="divider"></div>
+<div class="section">
 <ul>
   <%= link_to genre.name, genre_path(genre) %>
 </ul>
+</div>
 <%end%>
+</div>
