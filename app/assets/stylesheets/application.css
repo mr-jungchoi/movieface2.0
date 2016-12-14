@@ -69,11 +69,54 @@ body{
 }
 
 #carousel{
-  width: 40%;
-  margin-top: 150px;
-  margin-left: 17%;
+  position: absolute; left: 38%; top: 40%;
+  width: 25%;
+  margin: 0 auto;
 }
 
 #nav-mobile{
   position: absolute; left: 83%; bottom: 3%;
+}
+
+.movie-poster{
+  position: relative; left: -60px;
+  height: 350px;
+  float: left;
+}
+
+.video-container{
+  width: 65%;
+  margin-top: 15%;
+  float: right;
+}
+
+.movie-reviews{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+  float: left;
+  margin-top: 8%;
+  position: relative; left: -55px;
+}
+
+
+#review-header{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.75em;
+  font-weight: 300;
+}
+.reviews-ratings{
+  margin-top: 15%;
+}
+
+
+.movie-description{
+  width: 110%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+}
+
+#movie-title{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.25em;
+  font-weight: 600;
 }

@@ -1,13 +1,10 @@
-<div class="container">
-
+<div class="container movie-description">
+  <p><%= @movie.rated %> | <%= @movie.runtime %> | <%= movie_genre.name%></p>
+  <p> <%= @movie.plot %></p>
   <ul>
-    <li>Year: <%= @movie.year %></li>
-    <li>Rated: <%= @movie.rated %></li>
-    <li>Runtime: <%= @movie.runtime %></li>
     <li>Director: <%= @movie.director %></li>
     <li>Writer(s): <%= @movie.writer %></li>
     <li>Actors: <%= @movie.actors %></li>
-    <li>Plot: <%= @movie.plot %></li>
     <li>Average Rating: <%=@movie.reviews.average(:rating) %></li>
   </ul>
 
