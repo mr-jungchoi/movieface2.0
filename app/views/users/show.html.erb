@@ -14,7 +14,7 @@
 <div class="">
 
   <div class="section">
-    Favorite Movies:
+    <p class="user_content_title">Favorite Movies:</p>
     <div class="divider"></div>
   </div>
 
@@ -22,7 +22,7 @@
     <ul>
       <% @user.favorites.each do |favorite| %>
 
-      <li><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> <a href="/movies/<%= favorite.movie_id %>"><%= favorite.movie.title %></a> - <%= favorite.movie.year %></li>
+      <li class="user_content_list"><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> <a href="/movies/<%= favorite.movie_id %>"><%= favorite.movie.title %></a> - <%= favorite.movie.year %></li>
       <% end %>
     </ul>
   </div>
@@ -33,14 +33,14 @@
 <!-- Right side partial reviews -->
 <div class="">
   <div class="section">
-    Reviewed Movies:
+    <p class="user_content_title">Reviewed Movies:</p>
     <div class="divider"></div>
   </div>
 
   <div class="">
     <ul>
       <% @user.reviews.each do |review| %>
-        <li><a href="/movies/<%= review.movie.id %>/reviews/<%= review.id %>"><%= review.movie.title %></a> - <%= review.rating %>/5</li>
+        <li class="user_content_list"><a href="/movies/<%= review.movie.id %>/reviews/<%= review.id %>"><%= review.movie.title %></a> - <%= review.rating %>/5</li>
       <% end %>
     </ul>
   </div>

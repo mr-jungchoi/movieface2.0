@@ -2,3 +2,13 @@
   font-family: 'Buenard', serif;
   font-size: 4em;
 }
+
+.user_content_title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em;
+}
+
+.user_content_list {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+}
