@@ -13,9 +13,9 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body  class="grey ">
-    <nav >
-      <div class="nav-wrapper  grey darken-4">
+  <body  class="grey">
+    <nav>
+      <div class="nav-wrapper grey darken-4">
         <p><%= link_to "MovieFace 2.0",root_url, class: "brand-logo white-text " %></p>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
           <% if logged_in? %>
@@ -47,9 +47,7 @@
           </div>
         </form>
       </div>
-
-    <%= yield %>
-
+        <%= yield %>
     </div>
     <footer id="footer" class="page-footer grey darken-4">
       <div class="footer-copyright">
