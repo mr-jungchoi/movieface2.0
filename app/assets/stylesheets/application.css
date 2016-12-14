@@ -77,3 +77,13 @@ body{
 #nav-mobile{
   position: absolute; left: 83%; bottom: 3%;
 }
+
+.movie-poster{
+  position: relative; left: -60px;
+  height: 300px;
+  float: left;
+}
+
+.video-container{
+  position: relative; left: -80px; top: 80px;
+}

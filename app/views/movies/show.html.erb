@@ -1,35 +1,37 @@
 <div class="container">
-<h2><%= @movie.title %></h2>
-<%= image_tag(@movie.poster) %>
+  <div class="movie-info">
+    <%= image_tag(@movie.poster, class: "movie-poster") %>
+    <h2><%= @movie.title %></h2>
+    <%= render 'movies/movie', layout: false %>
+  </div>
   <div class="video-container">
-<iframe id="player" type="text/html"
-        width="790" height="445"
-        src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
-        frameborder="0"
-></iframe>
-</div>
-<%= render 'movies/movie', layout: false %>
+    <iframe id="player" type="text/html"
+            width="790" height="445"
+            src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
+            frameborder="0"
+    ></iframe>
+  </div>
 
-<% if logged_in? %>
-  <% unless movie_reviewed? %>
-    <p><%= link_to 'Create a new Review', new_movie_review_path(@movie) %></p>
-  <% end %>
-  <% unless movie_favorited? %>
-    <%= form_for ([ @movie, @movie.favorites.build ]) do |f| %>
-     <%= button_tag( :class => 'btn btn-default green darken-2') do %>Favorite<%end%>
+  <% if logged_in? %>
+    <% unless movie_reviewed? %>
+      <p><%= link_to 'Create a new Review', new_movie_review_path(@movie) %></p>
     <% end %>
-  <% end %>
-
-  <% unless @movie.reviews.empty? %>
-    <strong> Reviews:</strong>
-    <% @movie.reviews.each do |review| %>
-      <ul>
-        <li><%= review.content %></li>
-        <li><%= review.rating %>/5</li>
-        <p> - <%= link_to review.user.username, user_path(review.user) %></p>
-      </ul>
+    <% unless movie_favorited? %>
+      <%= form_for ([ @movie, @movie.favorites.build ]) do |f| %>
+       <%= button_tag( :class => 'btn btn-default green darken-2') do %>Favorite<%end%>
+      <% end %>
     <% end %>
 
+    <% unless @movie.reviews.empty? %>
+      <strong> Reviews:</strong>
+      <% @movie.reviews.each do |review| %>
+        <ul>
+          <li><%= review.content %></li>
+          <li><%= review.rating %>/5</li>
+          <p> - <%= link_to review.user.username, user_path(review.user) %></p>
+        </ul>
+      <% end %>
+
+    <% end %>
   <% end %>
-<% end %>
 </div>
