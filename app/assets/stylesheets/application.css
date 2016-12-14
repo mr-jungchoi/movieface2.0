@@ -46,6 +46,7 @@ nav {
 }
 
 .nav-wrapper {
+  padding-bottom: 7%;
   padding-left: 20px;
 }
 
@@ -56,4 +57,23 @@ body{
 #randomize {
   margin-left: 150px;
   margin-right: 150px;
+}
+
+#search{
+  border-radius: 25px;
+  color: black;
+  margin-left: 25%;
+  margin-top: 1%;
+  width: 25%;
+  height: 45px;
+}
+
+#carousel{
+  width: 40%;
+  margin-top: 150px;
+  margin-left: 17%;
+}
+
+#nav-mobile{
+  position: absolute; left: 83%; bottom: 3%;
 }
