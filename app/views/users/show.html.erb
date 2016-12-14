@@ -1,10 +1,4 @@
 <div class="container-fluid">
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
   <p class="profile_title">Welcome, <%= @user.username.capitalize %>!<p>
 
   <!-- Favorite movies left side -->
@@ -15,7 +9,7 @@
       <div class="divider"></div>
     </div>
 
-    <div class="">
+    <div class="fav_div">
       <ul>
         <% @user.favorites.each do |favorite| %>
 
@@ -26,7 +20,7 @@
   </div>
 
   <!-- Right side partial reviews -->
-  <div class="">
+  <div class="review_div">
     <div class="section">
       <p class="user_content_title">Reviewed Movies:</p>
       <div class="divider"></div>
