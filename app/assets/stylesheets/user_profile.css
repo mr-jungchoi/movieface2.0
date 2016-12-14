@@ -12,3 +12,21 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 1.25em;
 }
+
+.fav_list {
+  padding: 5px;
+}
+
+.review_list {
+  padding: 5px;
+}
+
+.review_content {
+  position: absolute;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+  color: #BED8FF;
+}

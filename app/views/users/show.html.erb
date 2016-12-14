@@ -7,42 +7,37 @@
   <br/>
   <p class="profile_title">Welcome, <%= @user.username.capitalize %>!<p>
 
-
-
-
-<!-- Favorite movies left side -->
-<div class="">
-
-  <div class="section">
-    <p class="user_content_title">Favorite Movies:</p>
-    <div class="divider"></div>
-  </div>
-
+  <!-- Favorite movies left side -->
   <div class="">
-    <ul>
-      <% @user.favorites.each do |favorite| %>
 
-      <li class="user_content_list"><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> <a href="/movies/<%= favorite.movie_id %>"><%= favorite.movie.title %></a> - <%= favorite.movie.year %></li>
-      <% end %>
-    </ul>
+    <div class="section">
+      <p class="user_content_title">Favorite Movies:</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="">
+      <ul>
+        <% @user.favorites.each do |favorite| %>
+
+        <li class="user_content_list fav_list"><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> <a href="/movies/<%= favorite.movie_id %>"><%= favorite.movie.title %></a> - <%= favorite.movie.year %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
-</div>
-
-
-<!-- Right side partial reviews -->
-<div class="">
-  <div class="section">
-    <p class="user_content_title">Reviewed Movies:</p>
-    <div class="divider"></div>
-  </div>
-
+  <!-- Right side partial reviews -->
   <div class="">
-    <ul>
-      <% @user.reviews.each do |review| %>
-        <li class="user_content_list"><a href="/movies/<%= review.movie.id %>/reviews/<%= review.id %>"><%= review.movie.title %></a> - <%= review.rating %>/5</li>
-      <% end %>
-    </ul>
+    <div class="section">
+      <p class="user_content_title">Reviewed Movies:</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="">
+      <ul>
+        <% @user.reviews.each do |review| %>
+          <li class="user_content_list review_list"><a href="/movies/<%= review.movie.id %>/reviews/<%= review.id %>"><%= review.movie.title %></a> - <%= review.rating %>/5  -  <span class="review_content"><%= review.content %></span</li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
 </div>
