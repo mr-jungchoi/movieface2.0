@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :movie_reviewed?, :movie_favorited?
+  helper_method :current_user, :logged_in?, :movie_reviewed?, :movie_favorited?, :movie_genre
 
   def youtube_token
     @youtube_token ||= "&key=#{Dotenv.load["YOUTUBE_TOKEN"]}"
@@ -26,6 +26,10 @@ class ApplicationController < ActionController::Base
       return true if @movie.id == favorite.movie_id
     end
     false
+  end
+
+  def movie_genre
+    @genre = Genre.find_by_id(@movie.genre_id)
   end
 
   protect_from_forgery with: :exception
