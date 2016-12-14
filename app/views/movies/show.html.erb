@@ -1,7 +1,7 @@
 <div class="container">
   <div class="movie-info">
     <%= image_tag(@movie.poster, class: "movie-poster") %>
-    <h3><%= @movie.title%> (<%=@movie.year%>)</h3>
+    <h4 id="movie-title"><%= @movie.title%> (<%=@movie.year%>)</h4>
     <%= render 'movies/movie', layout: false %>
     <% if logged_in? %>
     <% unless movie_reviewed? %>
@@ -24,7 +24,7 @@
 
     <div class="movie-reviews">
       <% unless @movie.reviews.empty? %>
-        <h4> Reviews:</h4>
+        <h4 id="review-header"> Reviews</h4>
         <% @movie.reviews.each do |review| %>
           <ul>
             <li><%= review.content %></li>
