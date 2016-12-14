@@ -13,11 +13,29 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body  class="grey ">
-    <nav >
-      <div class="nav-wrapper  grey darken-4">
+  <body  class="grey">
+    <nav>
+      <div class="nav-wrapper grey darken-4">
         <p><%= link_to "MovieFace 2.0",root_url, class: "brand-logo white-text " %></p>
-        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        <% if flash[:error] %>
+        <% flash[:error].each do |error| %>
+        <ul>
+          <%= error %>
+        </ul>
+        <% end %>
+        <% end %>
+        <div class="row">
+          <form id="search" class="col s offset-s36 white" action="/movies" method="post">
+            <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">search</i>
+                <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Title'>
+              </div>
+            </div>
+          </form>
+        </div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if logged_in? %>
             <li><%= link_to "#{current_user.username}", user_path(current_user)%></li>
             <li><%= link_to "Log Out", session_path(session), method: :delete%></li>
@@ -28,28 +46,8 @@
         </ul>
       </div>
     </nav>
-    <div class="container white layout_container z-depth-2">
-      <% if flash[:error] %>
-        <% flash[:error].each do |error| %>
-          <ul>
-          <%= error %>
-          </ul>
-        <% end %>
-      <% end %>
-      <div class="row">
-        <form class="col s12 offset-s36" action="/movies" method="post">
-          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">search</i>
-              <input id="icon_prefix" type="text" class="validate"  name='query' placeholder='Title'>
-            </div>
-          </div>
-        </form>
-      </div>
-
-    <%= yield %>
-
+    <div class="container white layout_container z-depth-5">
+        <%= yield %>
     </div>
     <footer id="footer" class="page-footer grey darken-4">
       <div class="footer-copyright">
