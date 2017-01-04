@@ -1,3 +1,5 @@
+require 'open-uri'
+
 movies = []
 f = File.open('movies.txt', 'r')
 
