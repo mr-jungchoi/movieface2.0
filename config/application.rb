@@ -1,3 +1,5 @@
+config.serve_static_assets = true
+
 require_relative 'boot'
 
 require "rails"
