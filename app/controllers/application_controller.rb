@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def movie_reviewed?
-    # binding.pry
     @current_user.reviews.each do |review|
       return true if @movie.id == review.movie_id
     end
