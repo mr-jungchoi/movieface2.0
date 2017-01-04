@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
 gem 'pry-byebug'
 gem 'react-rails'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,7 +37,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'faker'
-  gem 'dotenv-rails'
 end
 
 group :development do
