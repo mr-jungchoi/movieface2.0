@@ -1,0 +1,165 @@
+.profile_title {
+  font-family: 'Buenard', serif;
+  font-size: 4em;
+}
+
+.user_content_title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em;
+}
+
+.user_content_list {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+}
+
+.fav_list {
+  padding: 5px;
+}
+
+.review_list {
+  padding: 5px;
+}
+
+.review_content {
+  position: absolute;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+  color: #BED8FF;
+}
+
+/*.fav_div {
+  display: inline-block;
+  float: left;
+}
+
+.review_div {
+  display: inline-block;
+  float: left;
+}*/
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+#footer {
+  margin-left: 10%;
+  width:80%;
+}
+
+nav {
+  margin: auto;
+  margin-top: -15px;
+  width: 80%;
+}
+
+.copy_right {
+  display:  inline;
+  margin-left: 10px;
+}
+
+.api_credit {
+  display: inline;
+  padding-left: 22%;
+}
+
+.layout_container {
+  padding: 40px;
+  margin-bottom: -20px;
+  width: 80%;
+  display: flex;
+  /*margin-bottom: 1em;*/
+  min-height: 1000px;
+}
+
+.nav-wrapper {
+  padding-bottom: 7%;
+  padding-left: 20px;
+}
+
+body{
+  font: 12px Helvetica, Arial, sans-serif;
+}
+
+#randomize {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#search{
+  border-radius: 25px;
+  color: black;
+  margin-left: 25%;
+  margin-top: 1%;
+  width: 25%;
+  height: 45px;
+}
+
+#carousel{
+  position: absolute; left: 38%; top: 40%;
+  width: 25%;
+  margin: 0 auto;
+}
+
+#nav-mobile{
+  position: absolute; left: 75%; bottom: 3%;
+}
+
+.movie-poster{
+  position: relative; left: -60px;
+  height: 350px;
+  float: left;
+}
+
+.video-container{
+  width: 65%;
+  margin-top: 15%;
+  float: right;
+}
+
+.movie-reviews{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+  float: left;
+  margin-top: 8%;
+  position: relative; left: -55px;
+}
+
+
+#review-header{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.75em;
+  font-weight: 300;
+}
+.reviews-ratings{
+  margin-top: 15%;
+}
+
+
+.movie-description{
+  width: 110%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+}
+
+#movie-title{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.25em;
+  font-weight: 600;
+}
