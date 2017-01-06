@@ -1,8 +1,10 @@
+require 'open-uri'
+
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :movie_reviewed?, :movie_favorited?, :movie_genre
 
   def youtube_token
-    @youtube_token ||= "&key=#{Dotenv.load["YOUTUBE_TOKEN"]}"
+    @youtube_token ||= "&key=#{ENV["YOUTUBE_TOKEN"]}"
   end
 
   def logged_in?
