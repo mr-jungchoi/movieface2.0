@@ -1,5 +1,5 @@
 <h3><%=@genre.name%></h3>
-<div id="carousel" class="carousel carousel-slider">
+<div id="carousel" class="carousel slide">
   <% @genre.movies.each do |movie| %>
       <p> <%= link_to image_tag(movie.poster), movie_path(movie), class: "carousel-item" %></p>
   <% end %>
