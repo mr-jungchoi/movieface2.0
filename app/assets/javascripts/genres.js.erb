@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   var $carousel = $('.carousel');
 
   $carousel.carousel({full_width: true, padding: 15});
@@ -9,5 +9,15 @@ $(document).ready(function(){
 
   $('.left').on('click', function() {
     $carousel.carousel('prev', 2.5);
+  });
+
+  $carousel.on('mouseover', function() {
+    $(document).on('keyup', function() {
+      if (event.keyCode === 37) {
+        $carousel.carousel('prev', 2.3);
+      } else if (event.keyCode === 39) {
+        $carousel.carousel('next', 2.3);
+      }
+    });
   });
 });

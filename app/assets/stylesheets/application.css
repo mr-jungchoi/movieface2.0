@@ -15,15 +15,15 @@
  *= require_self
  */
 
- body {
-   font: 12px Helvetica, Arial, sans-serif;
- }
+body {
+ font: 12px Helvetica, Arial, sans-serif;
+}
 
- nav {
-   margin: auto;
-   margin-top: -15px;
-   width: 80%;
- }
+nav {
+ margin: auto;
+ margin-top: -15px;
+ width: 80%;
+}
 
 #footer {
   margin-left: 10%;
