@@ -2,17 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.genre-header {
-  height: 50px;
-}
-
-.movie-carousel {
-  position: relative; left: 15%; top: 40%;
-  margin: 0 auto;
-}
-
 .carousel-control {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
   background: none;
   border: none;
+}
+
+.carousel-control:focus {
+  background: none;
 }
