@@ -19,15 +19,8 @@ body {
  font: 12px Helvetica, Arial, sans-serif;
 }
 
-nav {
- margin: auto;
- margin-top: -15px;
- width: 80%;
-}
-
-#footer {
-  margin-left: 10%;
-  width:80%;
+.container {
+  width: 90%;
 }
 
 .copy_right {
@@ -38,15 +31,6 @@ nav {
 .api_credit {
   display: inline;
   padding-left: 22%;
-}
-
-.layout_container {
-  padding: 40px;
-  margin-bottom: -20px;
-  width: 80%;
-  display: flex;
-  /*margin-bottom: 1em;*/
-  min-height: 1000px;
 }
 
 .nav-wrapper {

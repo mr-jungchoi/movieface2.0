@@ -14,10 +14,11 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
-  <body  class="grey">
+  <body class="grey">
     <nav>
       <div class="nav-wrapper grey darken-4">
-        <p><%= link_to "MovieFace", root_url, class: "brand-logo white-text " %></p>
+        <%= link_to "MovieFace", root_url, class: "brand-logo white-text " %>
+        
         <% if flash[:error] %>
           <% flash[:error].each do |error| %>
           <ul>
@@ -25,6 +26,7 @@
           </ul>
           <% end %>
         <% end %>
+
         <div class="row">
           <form id="search" class="col s offset-s36 white" action="/movies" method="post">
             <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
@@ -47,12 +49,12 @@
         </ul>
       </div>
     </nav>
-    <div class="container white layout_container z-depth-5">
+    <div class="container">
       <%= yield %>
     </div>
     <footer id="footer" class="page-footer grey darken-4">
       <div class="footer-copyright">
-        <div class="">
+        <div>
           <p class="copy_right">© 2016 Copyright MovieFace</p>
           <p class="api_credit">API powered by <a href="https://www.omdbapi.com/">OMDB</a> and <a href="https://developers.google.com/youtube/v3/">YOUTUBE</a></p>
         </div>
