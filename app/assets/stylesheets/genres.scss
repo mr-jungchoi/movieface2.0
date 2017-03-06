@@ -1,3 +1,13 @@
 // Place all the styles related to the Genres controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.movie-carousel {
+  position: absolute; left: 15%; top: 40%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.carousel-control {
+  z-index: +1;
+}

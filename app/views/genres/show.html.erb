@@ -1,6 +1,18 @@
 <h3><%=@genre.name%></h3>
-<div id="carousel" class="carousel slide">
-  <% @genre.movies.each do |movie| %>
+<div class="movie-carousel carousel slide">
+  <div class="carousel-inner" role="listbox">
+    <% @genre.movies.each do |movie| %>
       <p> <%= link_to image_tag(movie.poster), movie_path(movie), class: "carousel-item" %></p>
-  <% end %>
+    <% end %>
+  </div>
+
+  <button class="left carousel-control" role="button">
+    <i class="material-icons" aria-hidden="true">skip_previous</i>
+    <span class="sr-only">Previous</span>
+  </button>
+
+  <button class="right carousel-control" role="button">
+    <i class="material-icons" aria-hidden="true">skip_next</i>
+    <span class="sr-only">Next</span>
+  </button>
 </div>

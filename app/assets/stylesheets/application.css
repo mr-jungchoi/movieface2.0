@@ -15,15 +15,19 @@
  *= require_self
  */
 
+ body {
+   font: 12px Helvetica, Arial, sans-serif;
+ }
+
+ nav {
+   margin: auto;
+   margin-top: -15px;
+   width: 80%;
+ }
+
 #footer {
   margin-left: 10%;
   width:80%;
-}
-
-nav {
-  margin: auto;
-  margin-top: -15px;
-  width: 80%;
 }
 
 .copy_right {
@@ -50,16 +54,12 @@ nav {
   padding-left: 20px;
 }
 
-body{
-  font: 12px Helvetica, Arial, sans-serif;
-}
-
 #randomize {
   margin-left: 150px;
   margin-right: 150px;
 }
 
-#search{
+#search {
   border-radius: 25px;
   color: black;
   margin-left: 25%;
@@ -68,55 +68,6 @@ body{
   height: 45px;
 }
 
-#carousel{
-  position: absolute; left: 15%; top: 40%;
-  width: 70%;
-  margin: 0 auto;
-}
-
-#nav-mobile{
+#nav-mobile {
   position: absolute; left: 75%; bottom: 3%;
-}
-
-.movie-poster{
-  position: relative; left: -60px;
-  height: 350px;
-  float: left;
-}
-
-.video-container{
-  width: 65%;
-  margin-top: 15%;
-  float: right;
-}
-
-.movie-reviews{
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.25em;
-  float: left;
-  margin-top: 8%;
-  position: relative; left: -55px;
-}
-
-
-#review-header{
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.75em;
-  font-weight: 300;
-}
-.reviews-ratings{
-  margin-top: 15%;
-}
-
-
-.movie-description{
-  width: 110%;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.25em;
-}
-
-#movie-title{
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2.25em;
-  font-weight: 600;
 }

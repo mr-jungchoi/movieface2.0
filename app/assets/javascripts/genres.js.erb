@@ -1,0 +1,13 @@
+$(document).ready(function(){
+  var $carousel = $('.carousel');
+
+  $carousel.carousel({full_width: true, padding: 15});
+
+  $('.right').on('click', function() {
+    $carousel.carousel('next', 2.5);
+  });
+
+  $('.left').on('click', function() {
+    $carousel.carousel('prev', 2.5);
+  });
+});
