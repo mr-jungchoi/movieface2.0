@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
 
   $carousel.on('mouseover', function() {
-    $(document).on('keyup', function() {
+    $(document).on('keydown', function() {
       if (event.keyCode === 37) {
         $carousel.carousel('prev', 2.3);
       } else if (event.keyCode === 39) {
@@ -22,6 +22,6 @@ $(document).ready(function() {
   });
 
   $carousel.on('mouseout', function() {
-    $(document).off('keyup');
+    $(document).off('keydown');
   });
 });
