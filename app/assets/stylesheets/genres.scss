@@ -1,3 +1,16 @@
 // Place all the styles related to the Genres controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-control {
+  position: relative;
+  top: 48%;
+  transform: translateY(-52%);
+  color: white;
+  background: none;
+  border: none;
+}
+
+.carousel-control:focus {
+  background: none;
+}

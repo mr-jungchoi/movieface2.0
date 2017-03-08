@@ -1,0 +1,27 @@
+$(document).ready(function() {
+  var $carousel = $('.carousel');
+
+  $carousel.carousel({full_width: true, padding: 15});
+
+  $('.right').on('click', function() {
+    $carousel.carousel('next', 2.5);
+  });
+
+  $('.left').on('click', function() {
+    $carousel.carousel('prev', 2.5);
+  });
+
+  $carousel.on('mouseover', function() {
+    $(document).on('keydown', function() {
+      if (event.keyCode === 37) {
+        $carousel.carousel('prev', 2.3);
+      } else if (event.keyCode === 39) {
+        $carousel.carousel('next', 2.3);
+      }
+    });
+  });
+
+  $carousel.on('mouseout', function() {
+    $(document).off('keydown');
+  });
+});
